@@ -1,5 +1,4 @@
-"https://dougblack.io/words/a-good-vimrc.html#fold
-"
+" https://dougblack.io/words/a-good-vimrc.html#fold
     " Mininimum settings {{{
 	"=== Min settings === 
 	set nocompatible
@@ -16,19 +15,22 @@
 	" }}}
     " UI Config {{{
 	"===  UI Config ===
-
-	" Enter command line mode.
-	nnoremap <space> :
-
+	" Enter command line mode using spacebar
+	nnoremap <space> : 
 	set wildmenu            " visual autocomplete for command menu
-
 	"allow  yanked text to be copied to the X11 system clipboard....
 	set clipboard=unnamedplus
-		" turn off highlight at underscore in .md files 
+	" turn off highlight at underscore in .md files 
 	" :syn clear markdownError
-		hi link markdownError normal
+	hi link markdownError normal
     " toggle number and realativenumber
     nnoremap <C-n> :exe 'set nu!' &nu ? 'rnu!' : ''
+    " Enable CursorLine
+    " set cursorline
+    " Default Colors for CursorLine
+    " highlight  CursorLine ctermfg=white ctermbg=blue
+    " set cursorcolumn
+    
 	" }}}
     " Searching {{{
 	"=== Searching ===
@@ -41,7 +43,7 @@
 	set foldmethod=indent   " fold based on indent level
 	set foldnestmax=10      " max 10 depth
 	set foldenable          " don't fold files by default on open
-	set foldlevelstart=10   " start with fold level of 1
+	set foldlevelstart=0   " start with fold level of 1
 	" }}}
     " Custom Movements {{{
     	"=== Custom Movements ===
@@ -57,7 +59,6 @@
 	nnoremap B ^
 	nnoremap E $
     "set the cursor to move down a single row on the screen
-    "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
     nnoremap j gj
     nnoremap k gk
 	" use ctrl-h/j/k/l to switch between splits
@@ -80,25 +81,39 @@
 	syntax enable
 	colorscheme vividchalk
 	set background=light
-
         "to toggle them automatically for you:
         map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 	" cd ~/.vim/bundle && git clone https://github.com/tpope/vim-vividchalk
 	" }}}
+    " Custom Leader {{{
+	" === Custom Leader ===
+	" set your own personal modifier key to something handy
+	let mapleader="," 
+	" use ,o to make a new vertical split, ,s for horiz, ,x to close a split
+		" ,v calls up VISUAL mode
+	" try ,o (as in OpEd) <-- works
+	noremap <leader>o <c-w>v<c-w>l
+	noremap <leader>s <c-w>s<c-w>j
+	noremap <leader>x <c-w>c
+	"  save file
+	nnoremap <leader>s :w<cr>
+	inoremap <leader>s <C-c>:w<cr>
+	" quit file
+	noremap <leader>q :q<cr>
+	" use <leader>p to paste from system clipboard
+	nnoremap <leader>p :set paste<CR>"+p:set nopaste<CR>
+	"python
+	autocmd Filetype python inoremap <leader>m if __name__ ==  "__main__":<enter>
+    " }}}
     " Statusline {{{
     "=== Statusline ===
     set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
     :set laststatus=2 
     "}}}
-    " Folding {{{
-    " === Folding settings ===
+    " vimrc folding {{{
+    " === vimrc folding settings ===
     set foldmethod=marker
     set foldlevel=0
     set modelines=1
     "vim:foldmethod=marker:foldlevel=0
     "}}}
-    "Launch Confi
-    "Tmu Config
-    "Autogroups
-    "Backups
-    "Custom Functions
