@@ -1,4 +1,5 @@
 " https://dougblack.io/words/a-good-vimrc.html#fold
+"
     " Mininimum settings {{{
 	"=== Min settings === 
 	set nocompatible
@@ -16,7 +17,7 @@
     " UI Config {{{
 	"===  UI Config ===
 	" Enter command line mode using spacebar
-	nnoremap <space> : 
+	nnoremap <space> :
 	set wildmenu            " visual autocomplete for command menu
 	"allow  yanked text to be copied to the X11 system clipboard....
 	set clipboard=unnamedplus
@@ -30,7 +31,6 @@
     " Default Colors for CursorLine
     " highlight  CursorLine ctermfg=white ctermbg=blue
     " set cursorcolumn
-    
 	" }}}
     " Searching {{{
 	"=== Searching ===
@@ -43,7 +43,7 @@
 	set foldmethod=indent   " fold based on indent level
 	set foldnestmax=10      " max 10 depth
 	set foldenable          " don't fold files by default on open
-	set foldlevelstart=0   " start with fold level of 1
+	set foldlevelstart=1   " start with fold level of 1
 	" }}}
     " Custom Movements {{{
     	"=== Custom Movements ===
