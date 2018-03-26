@@ -1,4 +1,5 @@
-zArchive
+Archive
+*.txt
 *.csv
 common_passwords.csv
 sample*
