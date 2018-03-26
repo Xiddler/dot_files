@@ -8,5 +8,4 @@
 # e.g.
 # gett quo
 
-grep -i $1 $HOME/common_passwords.txt | awk '{ print $2 " : " $3 " : " $4 " : " $5 }'
-
+grep -i $1 $HOME/common_passwords.csv | awk 'BEGIN {FS=","}{ print $2 "\n "$3"\n "$4"\n "$5}' | sed 's/^ //g'

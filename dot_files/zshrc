@@ -133,9 +133,9 @@ alias -g G='| egrep -i --color=auto'
 alias -g xn='| xargs -n 1'
 alias -g GC='git commit -m "'
 # Other
-alias wtr='curl wttr.in/limerick'
+alias wett='curl wttr.in/limerick'
 alias hp='ls --hide=*.py'
-alias gett='cd $HOME && ./get_password.sh'
+alias gett='$HOME/get_password.sh'
 alias chk='cd $HOME && ./info.sh'
 alias ll='ls -la'
 alias l.='ls -d .* --color=auto' # Show hidden files ##
