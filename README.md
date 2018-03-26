@@ -3,4 +3,4 @@ contents of dot_files on SD card
 git push git@github.com:Xiddler/dot_files.git
 =======
 # dot_files
-Late March 2016
+End March 
