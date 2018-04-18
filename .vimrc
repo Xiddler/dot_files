@@ -118,3 +118,11 @@
     set modelines=1
     "vim:foldmethod=marker:foldlevel=0
     "}}}
+
+" comment selected lines with # in python
+vnoremap <C-n> :norm I#
+" uncomment # in python
+vnoremap <C-m> :norm ^x
+"
+"
+"

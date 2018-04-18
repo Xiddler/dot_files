@@ -130,6 +130,11 @@ alias vv='vim ~/dot_files/vimrc'
 alias vz="vim $HOME/dot_files/zshrc"
 # Globals
 alias -g G='| egrep -i --color=auto'
+alias -g C=' | clipit'
+alias -g P='pwd -P'
+#----
+
+alias -g PS='ps aux '
 alias -g xn='| xargs -n 1'
 alias -g GC='git commit -m "'
 # Other
@@ -158,7 +163,5 @@ alias ggp='git push git@github.com:Xiddler/xiddler.github.io.git gh-pages:master
 alias speedtest="curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 #
 #
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
 #
 #
