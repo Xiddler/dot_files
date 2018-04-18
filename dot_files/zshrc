@@ -112,7 +112,7 @@ setopt autocd
 # only fools wouldn't do this ;-) 
 export EDITOR="vim"
 # ALIASES
-# alias cx="clear"
+alias cx="clear"
 alias hj='history'
 # NAVIGATION
 alias dl='cd ~/Downloads/'
@@ -142,23 +142,17 @@ alias l.='ls -d .* --color=auto' # Show hidden files ##
 alias pss='python -m SimpleHTTPServer 8000'
 alias zln='zmv -L'
 alias zcp='zmv -C'
-# alias sz='source /media/ubuntu/3520-FD13/zim/Computer/1Linux_Live_USB/dot_files/.zshrc'
 alias sz='source ~/dot_files/zshrc'
-# alias sv='source ~/dot_files/vimrc' within vim :source ~/dot_files/vimrc
 alias sb='source ~/dot_files/bashrc'
 alias zs='zsh_stats' # lists last 20 commands with statistics
 alias ipi='ifconfig|grep 168.11 | cut -d: -f2' # internal ipaddress
 alias ipe='curl ipinfo.io' # external ip address
 alias synaptic='sudo synaptic'
 # git
-alias ggs='git status'
-alias ggl='git log'
+alias st='git status'
+alias cm='git commit -m '
+alias gl='git log'
 alias ggp='git push git@github.com:Xiddler/xiddler.github.io.git gh-pages:master'
 # speedtest
 alias speedtest="curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
-#
-#
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-#
 #
