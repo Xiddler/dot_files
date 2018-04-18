@@ -132,6 +132,9 @@ alias vz="vim $HOME/dot_files/zshrc"
 alias -g G='| egrep -i --color=auto'
 alias -g xn='| xargs -n 1'
 alias -g GC='git commit -m "'
+alias -g PS='ps aux '
+alias -g P='pwd -P'
+alias -g C=' | clipit'
 # Other
 alias wett='curl wttr.in/limerick'
 alias hp='ls --hide=*.py'
