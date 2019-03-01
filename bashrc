@@ -20,16 +20,17 @@ alias pss='python -m SimpleHTTPServer 8000'
 
 #
 set -o vi
-shopt -s autocd # allows e.g. Documents instead of cd Documents
+
+# shopt -s autocd # allows e.g. Documents instead of cd Documents
 
 # dirb
-source ~/.dirb.sh
+# source ~/.dirb.sh
 
 # virtualenvwrapper
 #source /usr/share/virtualenvwrapper/virtualenvwrapper.sh # 2017-10-16
-export WORKON_HOME=~/.virtualenvs
-export EDITOR='vim'
-export PATH=$PATH:/home/ubuntu/Downloads
+# export WORKON_HOME=~/.virtualenvs
+# export EDITOR='vim'
+# export PATH=$PATH:/home/ubuntu/Downloads
 
 # source ~/.local/bin/virtualenvwrapper.sh
 
@@ -60,8 +61,8 @@ NC='\[\033[0m\]'
 export PATH=$PATH:$HOME/.local/bin  
 
 
-export WORKON_HOME=$HOME/projects  
-export PROJECT_HOME=$HOME/projects  
+# export WORKON_HOME=$HOME/projects  
+# export PROJECT_HOME=$HOME/projects  
 #source $HOME/.local/bin/virtualenvwrapper.sh 
 
 
@@ -83,7 +84,7 @@ esac
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
-shopt -s histappend
+# shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -91,7 +92,7 @@ HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+# shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
