@@ -1,8 +1,8 @@
-    " Mininimum settings {{{
-    " === Min settings === 
-    set nocompatible
-	set <esc>=jk "" my inline comment in a set command
-	set relativenumber
+"zRelflord Mininimum settings {{{
+    "=== Min settings === 
+	set nocompatible
+	" set <esc>=jk " my inline comment in a set command
+    :imap jk <Esc>
 	"}}}
     " Spaces And Tabs {{{ 
 	"=== Spaces And Tabs ===
@@ -23,7 +23,8 @@
 	" :syn clear markdownError
 	hi link markdownError normal
     " toggle number and realativenumber
-    nnoremap <C-n> :exe 'set nu!' &nu ? 'rnu!' : ''
+    " nnoremap <C-n> :exe 'set nu!' &nu ? 'rnu!' : ''
+    set number relativenumber
     " Enable CursorLine
     " set cursorline
     " Default Colors for CursorLine
@@ -69,19 +70,59 @@
 	" === Pathogen ===
 	" load Pathogen
 	filetype off
-	execute pathogen#helptags()
-	execute pathogen#infect()
+	" execute pathogen#helptags()
+	" execute pathogen#infect()
 	syntax on
 	filetype plugin indent on
 	" }}}
+    "
+    " start neovim additions
+    "
+    " Plug {{{
+    "
+    " Plug
+    " the Plug plugin manager
+    call plug#begin()
+    " tpopes plugins
+    Plug 'tpope/vim-sensible'
+    Plug 'tpope/vim-commentary' " e.g. gc<motion> gdj <-- toggles
+    Plug 'tpope/vim-surround' " e.g. to surround with {} use yssB. see :h surround
+    Plug 'tpope/vim-vividchalk'  "colorscheme 
+     " airline-powerline prompt
+    Plug 'vim-airline/vim-airline'
+    " colorschemes
+    "
+    Plug 'mhartington/oceanic-next' " https://github.com/mhartington/oceanic-next < OceanicNext
+    Plug 'https://github.com/tomasr/molokai.git'
+    Plug 'https://github.com/endel/vim-github-colorscheme.git'
+    " many colors
+    Plug 'https://github.com/upsuper/vim-colorschemes.git'
+    call plug#end()
+    " 
+	filetype off
+	syntax on
+	filetype plugin indent on
+    
+    " }}}
+    " 
+    " end neovim additions
+    "
     " Theme & Colors {{{
 	" === Theme  & Colors ===
-	syntax enable
-	colorscheme vividchalk
-	set background=light
+    " set t_Co=256
+	" syntax enable
+    " COLORSCHEMES
+    " colorscheme vividchalk 
+    " colorscheme OceanicNext
+    colorscheme molokai
+    " colorscheme colorschemes
+    " colorscheme github
+    " colorscheme elflord
+    ""highlight Comment ctermbg=DarkGray
+	" colors zazen
+	" set background=light
         "to toggle them automatically for you:
-        map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
-	" cd ~/.vim/bundle && git clone https://github.com/tpope/vim-vividchalk
+     "   map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 	" }}}
     " Custom Leader {{{
 	" === Custom Leader ===
@@ -100,6 +141,7 @@
 	noremap <leader>q :q<cr>
 	" use <leader>p to paste from system clipboard
 	nnoremap <leader>p :set paste<CR>"+p:set nopaste<CR>
+    nnoremap <leader>y "+y
 	"python
 	autocmd Filetype python inoremap <leader>m if __name__ ==  "__main__":<enter>
     " }}}
@@ -115,11 +157,3 @@
     set modelines=1
     "vim:foldmethod=marker:foldlevel=0
     "}}}
-
-" comment selected lines with # in python
-vnoremap <C-n> :norm I#
-" uncomment # in python
-vnoremap <C-m> :norm ^x
-"select line li,e in Sublime Text
-nnoremap <C-l> vg_
-"
