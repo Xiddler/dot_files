@@ -53,10 +53,13 @@ cat $HOME/.ssh/id_rsa.pub | clipit
 (clipit is a clipboard manager -- a way to paste the key into github.com)
 
 ### add SSH key to github
-go to github.com and paste the above id_rsa.pub into the SSH new key
+go to github.com and paste the above id_rsa.pub into the SSH new key textbox
 ### to test
 ssh -T -p 443 git@ssh.github.com
 
+### powerline
+sudo apt install powerline
+sudo apt install fonts-powerline
 
 
 
