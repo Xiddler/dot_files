@@ -170,12 +170,15 @@ alias -g catt='cat /media/donagh/3520-FD13/zim/Computer/11SignUps.txt|ag -i -A5 
 alias -g passout='cat /media/donagh/3520-FD13/zim/Computer/11SignUps.txt|ag -i -A5 ' # alternative alias
 # contacts
 alias -g contin='python3 /media/donagh/3520-FD13/2programming_repository/python/1python_projects/tkinter_GUI/passin_credentials/contin.py' # input new contact
-alias -g contout='cat /media/donagh/3520-FD13/zim/Business/CONTACTS/Contacts.txt | ag -i -A18 -B2 ' # get contact  
+alias -g contout='cat /media/donagh/3520-FD13/zim/ORG/03_CONTACTS/Contacts.txt | ag -i -A18 -B2 ' # get contact  
+alias -g kontout='cat /media/donagh/3520-FD13/zim/ORG/03_CONTACTS/Contacts.txt | ag -i -A18 -B2 '
+# backups
+alias -g zimbu='/home/donagh/.scripts/zim_backup_to_tinyUSB.sh'
 # Other
 alias wett='curl wttr.in/limerick'
 alias hp='ls --hide=*.py'
 alias gett='$HOME/.scripts/get_password.sh'
-alias contout='$HOME/contact_out.sh' # refers to contacts.csv which is /media/ubuntu/3520-FD13/0My_Folders/00Donaghs_ORG/14_Donaghs_CONTACTS/00_Main_Contacts.csv
+# alias contout='$HOME/contact_out.sh' # refers to contacts.csv which is /media/ubuntu/3520-FD13/0My_Folders/00Donaghs_ORG/14_Donaghs_CONTACTS/00_Main_Contacts.csv
 # alias chk='cd $HOME && ./info.sh'
 alias chk='$HOME/.scripts/info.sh'
 alias ll='ls -la'
@@ -246,6 +249,7 @@ don() { cd $HOME/sd35/1donaghs-stuff/Big_Projects/2019_new_earn}
 app() { cd $HOME/Applications}
 work() { cd /media/donagh/015C-2582/Donaghs_WORKSEARCH}
 ts() { cd $HOME/TESTING }
+tst() { cd $HOME/TESTING }
 books() {cd $HOME/sd35/books }
 
 # where the -U stands for unique, tells the shell that it should not add anything to $PATH if it's there already
