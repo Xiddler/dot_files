@@ -19,19 +19,19 @@ The originals are saved in: 2programming_repository/git_github/dot_files/
 The leading . is omitted for clarity (but retained in the folders)
 
 ## Meta files
-README.md 
+README.md\
 cp_to_P_E.sh
 
 ## Listing of the dot files
-bashrc
-vimrc
-zshrc
-dircolors
-Xdefaults
-Xresources
-init.vim
-spacemacs
-tmux.conf
+bashrc\
+vimrc\
+zshrc\
+dircolors\
+Xdefaults\
+Xresources\
+init.vim\
+spacemacs\
+tmux.conf\
 
 and the following folder which has the vim plugins I like:
 vim/
@@ -45,11 +45,11 @@ but replace the .zshrc with the above one
 git config --global user.email "xiddler@gmail.com" &&   git config --global user.name "Donagh"
 
 ## ssh
-ssh-keygen -t rsa -b 4096 -C "xiddler@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "xiddler@gmail.com"\
 then
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-cat $HOME/.ssh/id_rsa.pub | clipit
+eval "$(ssh-agent -s)"\
+ssh-add ~/.ssh/id_rsa\
+cat $HOME/.ssh/id_rsa.pub | clipit\
 (clipit is a clipboard manager -- a way to paste the key into github.com)
 
 ### add SSH key to github
@@ -58,7 +58,7 @@ go to github.com and paste the above id_rsa.pub into the SSH new key textbox
 ssh -T -p 443 git@ssh.github.com
 
 ### powerline
-sudo apt install powerline
+sudo apt install powerline\
 sudo apt install fonts-powerline
 
 
