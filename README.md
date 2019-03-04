@@ -1,6 +1,14 @@
 # my dot_files
+2019-03-04 
 
-These are my main dot_files. 
+## TO DO
+make a script to copy these dot files to the new home folder with a leading dot
+
+
+
+
+
+## These are my main dot_files. 
 The initial dot is removed to keep them visible on my local machine.
 I have also included my .vim folder for ultimate portability.
 Made a symbolic link to ~/PORTABLE_ENV
@@ -10,9 +18,11 @@ This repo contains the following dot files and the .vim/ folder
 The originals are saved in: 2programming_repository/git_github/dot_files/
 The leading . is omitted for clarity (but retained in the folders)
 
+## Meta files
 README.md 
 cp_to_P_E.sh
 
+## Listing of the dot files
 bashrc
 vimrc
 zshrc
@@ -23,13 +33,29 @@ init.vim
 spacemacs
 tmux.conf
 
-and the following folders:
+and the following folder which has the vim plugins I like:
 vim/
 
-Missing folder:
-.oh-my-zsh
+
+## .oh-my-zsh
 $ sudo curl -L http://install.ohmyz.sh | sh
 but replace the .zshrc with the above one
+
+## git
+git config --global user.email "xiddler@gmail.com" &&   git config --global user.name "Donagh"
+
+## ssh
+ssh-keygen -t rsa -b 4096 -C "xiddler@gmail.com"
+then
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+cat $HOME/.ssh/id_rsa.pub | clipit
+(clipit is a clipboard manager -- a way to paste the key into github.com)
+
+### add SSH key to github
+go to github.com and paste the above id_rsa.pub into the SSH new key
+### to test
+ssh -T -p 443 git@ssh.github.com
 
 
 
