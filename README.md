@@ -38,10 +38,12 @@ vim/
 
 
 ## .oh-my-zsh
-$ sudo curl -L http://install.ohmyz.sh | sh
+$ sudo curl -L http://install.ohmyz.sh | sh\
 but replace the .zshrc with the above one
 
 ## git
+** get the dot files onto the remote machine **\
+git clone https://github/Xiddler/dot_files.git\
 git config --global user.email "xiddler@gmail.com" &&   git config --global user.name "Donagh"
 
 ## ssh

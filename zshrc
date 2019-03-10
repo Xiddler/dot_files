@@ -221,7 +221,7 @@ alias def='~/.scripts/get_defs.sh '
 bindkey 'jk' vi-cmd-mode # switches to the command mode
 
 # for urxvt terminal emulator
-# xrdb ~/.Xresources  # may need to be in my .bashrc file though
+xrdb ~/.Xresources  # may need to be in my .bashrc file though
 TERM=xterm
 
 # cd  /media/ubuntu/3520-FD13/2programming_repository/IT_projects/Dashboard_personal/ && gunicorn render_todo:app
@@ -251,16 +251,25 @@ work() { cd /media/donagh/015C-2582/Donaghs_WORKSEARCH}
 ts() { cd $HOME/TESTING }
 tst() { cd $HOME/TESTING }
 books() {cd $HOME/sd35/books }
+what() { cd /media/donagh/3520-FD13/0My_Folders/00Donaghs_ORG/WHAT }
+# convert a .md file to a .pdf file
+mkp() { ~/.scripts/mktopdf.sh $1 }
 
 # where the -U stands for unique, tells the shell that it should not add anything to $PATH if it's there already
 typeset -U path
 
 # my easy journal 
-journal() {
+# journal() {
+#         mkdir -p ~/journal/`date +%Y`
+#         $EDITOR ~/journal/`date +%Y`/`date +%m-%d`
+#     }
+# alias jj=journal # opens todays journal file in vim for editing.
+
+md_journal() {
         mkdir -p ~/journal/`date +%Y`
-        $EDITOR ~/journal/`date +%Y`/`date +%m-%d`
+        $EDITOR ~/journal/`date +%Y`/`date +%m-%d\.md`
     }
-alias jj=journal # opens todays journal file in vim for editing.
+alias mj=md_journal # opens todays journal as a markdown file in vim for editing.
 
 # grep hist
 histgrep () 
