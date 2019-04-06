@@ -1,22 +1,27 @@
 # donaghs
-alias cx='clear'
-alias ds='cd ~/Documents'
-alias hh='cd ~/'
-alias hj='history'
-alias vb='vim ~/.bashrc'
-alias vv='vim ~/.vimrc'
-alias cdc='cd ~/Documents/0_MyFolders/Computers_General/'
-alias cdp='cd ~/Documents/0_MyFolders/Computers_PROJECTS/'
-alias cddr='cd ~/Dropbox/'
-alias cddw='cd ~/Downloads/'
-alias xx='xmodmap ~/.Xmodmap'
-alias hp='ls --hide=*.py'
-alias l.='ls -d .* --color=auto'
-alias gett='cd $HOME && ./get_password.sh'
-alias chk='cd $HOME && ./info.sh'
-alias synaptic='sudo synaptic'
-alias sshdon='ssh donagh@192.168.11.100'
-alias pss='python -m SimpleHTTPServer 8000'
+# Add bash aliases.
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
+
+# alias cx='clear'
+# alias ds='cd ~/Documents'
+# alias hh='cd ~/'
+# alias hj='history'
+# alias vb='vim ~/.bashrc'
+# alias vv='vim ~/.vimrc'
+# alias cdc='cd ~/Documents/0_MyFolders/Computers_General/'
+# alias cdp='cd ~/Documents/0_MyFolders/Computers_PROJECTS/'
+# alias cddr='cd ~/Dropbox/'
+# alias cddw='cd ~/Downloads/'
+# alias xx='xmodmap ~/.Xmodmap'
+# alias hp='ls --hide=*.py'
+# alias l.='ls -d .* --color=auto'
+# alias gett='cd $HOME && ./get_password.sh'
+# alias chk='cd $HOME && ./info.sh'
+# alias synaptic='sudo synaptic'
+# alias sshdon='ssh donagh@192.168.11.100'
+# alias pss='python -m SimpleHTTPServer 8000'
 
 #
 set -o vi

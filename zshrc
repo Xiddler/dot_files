@@ -1,3 +1,10 @@
+# NOTE: Aliases handled in .zsh_aliases or .bash_aliases
+#
+# Add zsh aliases.
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
+
 # Path to your oh-my-zsh installation.
   # export ZSH=/home/ubuntu/.oh-my-zsh
   export ZSH=/home/donagh/.oh-my-zsh
@@ -127,98 +134,104 @@ export EDITOR="vim"
 # ALIASES
 # see also bindkey below
 # alias cx="clear"
-alias hj='history'
-alias ping='ping -c3 '
+# alias hj='history'
+# alias ping='ping -c3 '
 # NAVIGATION
-alias ra='ranger'
-alias dl='cd ~/Downloads/'
-alias gsd="cd $HOME/sd35"
-alias gll="cd $HOME/1Linux_Live_USB"
-# alias gcc="cd $HOME/sd35/zim/Computer"
-alias gpp="cd $HOME/sd35/2programming_repository/python"
-alias ghh="cd $HOME/3holder"
+# alias ra='ranger'
+# alias dl='cd ~/Downloads/'
+#
 # navigate to folder using ~gpl
-alias gpl="cd /media/donagh/3520-FD13/2programming_repository/python/1python_projects/django_projects/lanner_django"
-alias ds='cd ~/Documents'
-alias hh='cd ~/'
-alias cd..='cd ..'
+# alias gpl="cd /media/donagh/3520-FD13/2programming_repository/python/1python_projects/django_projects/lanner_django"
+# alias ds='cd ~/Documents'
+# alias hh='cd ~/'
+# alias cd..='cd ..'
 # Edit config files
 # alias vim='sudo vim '
 # dot files now linked to the files in SD35/.../dot_files/dot_files
-alias cb='cat ~/.bashrc'
-alias cv='cat ~/.vimrc'
-alias cz='cat ~/.zshrc'
-alias vb='vim ~/.bashrc'
-alias vv='vim ~/.vimrc'
-alias vz="vim ~/.zshrc"
-alias ni='nvim $HOME/.config/nvim/init.vim' # neovim, if installed
+# alias cb='cat ~/.bashrc'
+# alias cv='cat ~/.vimrc'
+# alias cz='cat ~/.zshrc'
+# alias vb='vim ~/.bashrc'
+# alias vv='vim ~/.vimrc'
+# alias vz="vim ~/.zshrc"
+# alias ni='nvim $HOME/.config/nvim/init.vim' # neovim, if installed
 # Globals
-alias -g G='| egrep -i --color=auto'
-alias -g xn='| xargs -n 1'
-alias -g GC='git commit -m "'
-alias -g PS='ps aux | egrep -i --color=auto'
-alias -g P='pwd -P'
+# alias -g G='| egrep -i --color=auto'
+# alias -g xn='| xargs -n 1'
+# alias -g GC='git commit -m "'
+# alias -g PS='ps aux | egrep -i --color=auto'
+# alias -g P='pwd -P'
 # alias -g C=' | clipit'
-alias -g C=' | gpaste-client'
-alias -g lsd='du -s -- *(D) | sort -k1n' # list size of directories
-alias -g nt='gnome-terminal && zsh -l' # open a new zsh terminal  
-alias -g exa='~/Applications/exa-linux-x86_64' # modern ls
-alias -g zz='zsh -l'
+# alias -g C=' | gpaste-client'
+# alias -g lsd='du -s -- *(D) | sort -k1n' # list size of directories
+# alias -g nt='gnome-terminal && zsh -l' # open a new zsh terminal  
+# alias -g exa='~/Applications/exa-linux-x86_64' # modern ls
+# alias -g zz='zsh -l'
 # passwords
-alias -g passin='python3 /media/donagh/3520-FD13/2programming_repository/python/1python_projects/tkinter_GUI/passin_credentials/pw_data-input.py' # input new password
-alias -g catt='cat /media/donagh/3520-FD13/zim/Computer/11SignUps.txt|ag -i -A5 '
-alias -g passout='cat /media/donagh/3520-FD13/zim/Computer/11SignUps.txt|ag -i -A5 ' # alternative alias
+# alias -g passin='python3 /media/donagh/3520-FD13/2programming_repository/python/1python_projects/tkinter_GUI/passin_credentials/pw_data-input.py' # input new password
+# alias -g catt='cat /media/donagh/3520-FD13/zim/Computer/11SignUps.txt|ag -i -A5 '
+# alias -g passout='cat /media/donagh/3520-FD13/zim/Computer/11SignUps.txt|ag -i -A5 ' # alternative alias
 # contacts
-alias -g contin='python3 /media/donagh/3520-FD13/2programming_repository/python/1python_projects/tkinter_GUI/passin_credentials/contin.py' # input new contact
-alias -g contout='cat /media/donagh/3520-FD13/zim/ORG/03_CONTACTS/Contacts.txt | ag -i -A18 -B2 ' # get contact  
-alias -g kontout='cat /media/donagh/3520-FD13/zim/ORG/03_CONTACTS/Contacts.txt | ag -i -A18 -B2 '
+# alias -g contin='python3 /media/donagh/3520-FD13/2programming_repository/python/1python_projects/tkinter_GUI/passin_credentials/contin.py' # input new contact
+# alias -g contout='cat /media/donagh/3520-FD13/zim/ORG/03_CONTACTS/Contacts.txt | ag -i -A18 -B2 ' # get contact  
+# alias -g kontout='cat /media/donagh/3520-FD13/zim/ORG/03_CONTACTS/Contacts.txt | ag -i -A18 -B2 '
 # backups
-alias -g zimbu='/home/donagh/.scripts/zim_backup_to_tinyUSB.sh'
+# alias -g zimbu='/home/donagh/.scripts/zim_backup_to_tinyUSB.sh'
+
+# alias -s
+# the following shortcut alias means that pressing enter after just a 
+# file name with .md extension will automagically open it with vim. Hurrah!
+# alias -s md=vim
+
 # Other
-alias wett='curl wttr.in/limerick'
-alias hp='ls --hide=*.py'
-alias gett='$HOME/.scripts/get_password.sh'
+# alias wett='curl wttr.in/limerick'
+# alias hp='ls --hide=*.py'
+# alias gett='$HOME/.scripts/get_password.sh'
 # alias contout='$HOME/contact_out.sh' # refers to contacts.csv which is /media/ubuntu/3520-FD13/0My_Folders/00Donaghs_ORG/14_Donaghs_CONTACTS/00_Main_Contacts.csv
 # alias chk='cd $HOME && ./info.sh'
-alias chk='$HOME/.scripts/info.sh'
-alias ll='ls -la'
-alias lls='ls | xargs -n1' # show ls in a single column
-alias ld='ls -d */'
-alias l.='ls -d .* --color=auto' # Show hidden files ##
-alias pss='python -m SimpleHTTPServer 8000'
+# alias chk='$HOME/.scripts/info.sh'
+# alias ll='ls -la'
+# alias lls='ls | xargs -n1' # show ls in a single column
+# alias ld='ls -d */'
+# alias l.='ls -d .* --color=auto' # Show hidden files ##
+# alias pss='python -m SimpleHTTPServer 8000'
 # shortcuts for activating venvs. pb python basic
-alias pb='source $HOME/.virtualenvs/basic/bin/activate'
-alias pf='source $HOME/.virtualenvs/flask/bin/activate'
-alias pd='source $HOME/.virtualenvs/django/bin/activate'
-alias zln='zmv -L'
-alias zcp='zmv -C'
-alias sb='source ~/.bashrc'
-alias sz='source ~/.zshrc'
-alias zs='zsh_stats' # lists last 20 commands with statistics
+# alias pb='source $HOME/.virtualenvs/basic/bin/activate'
+# alias pf='source $HOME/.virtualenvs/flask/bin/activate'
+# alias pd='source $HOME/.virtualenvs/django/bin/activate'
+# alias zln='zmv -L'
+# alias zcp='zmv -C'
+# alias sb='source ~/.bashrc'
+# alias sz='source ~/.zshrc'
+# alias zs='zsh_stats' # lists last 20 commands with statistics
+# alias png='ping -c4 8.8.8.8' # ping google to check if there is internet access
 # alias ipi="ip -4 addr | grep 192 | sed 's/^[ \t]*//' | cut -d ' ' -f 2" | cut -d'/' -f1
-alias ipi="ip -4 addr  | grep 192 | cut -d '/' -f1"
+# alias ipi="ip -4 addr  | grep 192 | cut -d '/' -f1"
 # alias ipe='curl ipinfo.io' # external ip address
-alias ipe='dig @resolver1.opendns.com ANY myip.opendns.com +short' # external ip -- better
-alias synaptic='sudo synaptic'
+# alias ipe='dig @resolver1.opendns.com ANY myip.opendns.com +short' # external ip -- better
+# alias synaptic='sudo synaptic'
 # git
-alias st='git status'
-alias cm='git commit -m '
-alias gl='git log'
+# alias gst='git status'
+# alias ggs='git status'
+# alias cm='git commit -m '
+# alias gcm='git commit -m '
+# alias ggl='git log'
 # alias ggp='git push git@github.com:Xiddler/xiddler.github.io.git gh-pages:master'
 # speedtest
-alias speedtest="curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+# alias speedtest="curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 # output time in words
 # alias t="calc -d 'read qtime; qtime(1)'" # sudo apt install apcalc SUMMER TIME
-alias t="calc -d 'read qtime; qtime(0)'" # sudo apt install apcalc WINTER TIME
+# alias t="calc -d 'read qtime; qtime(0)'" # sudo apt install apcalc WINTER TIME
 # get latest hanging stuff
-alias hanging='cd $HOME/ziim/Computer/ && tail -n4 0_Hanging.txt && cd $HOME/ziim/Donaghs/00_Home/ && tail -n4 0_Hanging.txt'
+# alias hanging='cd $HOME/ziim/Computer/ && tail -n4 0_Hanging.txt && cd $HOME/ziim/Donaghs/00_Home/ && tail -n4 0_Hanging.txt'
 # CLI dictionary
 # alias dict='cat /media/donagh/3520-FD13/1donaghs-stuff/Dictionaries/Oxford_English_Dictionary/oxford_dict.txt | grep '
 # CLI dictionary
-alias def='~/.scripts/get_defs.sh '
+# alias def='~/.scripts/get_defs.sh '
 
 # bindkeys see also $ zle -al
-bindkey 'jk' vi-cmd-mode # switches to the command mode
+# switches to the command mode
+bindkey 'jk' vi-cmd-mode 
 
 # for urxvt terminal emulator
 xrdb ~/.Xresources  # may need to be in my .bashrc file though
@@ -235,8 +248,8 @@ TERM=xterm
 
 # ls_colors
 eval "`dircolors -b ~/.dircolors`"
-alias ls='ls --color=auto'
-alias lk='ls -1v'
+# alias ls='ls --color=auto'
+# alias lk='ls -1v'
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -251,9 +264,16 @@ work() { cd /media/donagh/015C-2582/Donaghs_WORKSEARCH}
 ts() { cd $HOME/TESTING }
 tst() { cd $HOME/TESTING }
 books() {cd $HOME/sd35/books }
+minding() {cd $HOME/journal/2019/minding_me }
 what() { cd /media/donagh/3520-FD13/0My_Folders/00Donaghs_ORG/WHAT }
-# convert a .md file to a .pdf file
+# convert a .md file to a .pdf file. Usage: $ mkp filename.md
 mkp() { ~/.scripts/mktopdf.sh $1 }
+cash() { /media/donagh/3520-FD13/0My_Folders/00Donaghs_ORG/03_FINANCES/GnuCash }
+gcash() { cd ~/Applications/gnucash && flatpak run org.gnucash.GnuCash }
+bus() { cd /media/donagh/3520-FD13/0My_Folders/BUSINESS }
+# shortcut to made a screenshot e.g. grap foto1.png then make selection with mouse
+grab() { scrot -s $1 }
+
 
 # where the -U stands for unique, tells the shell that it should not add anything to $PATH if it's there already
 typeset -U path
@@ -261,27 +281,44 @@ typeset -U path
 # my easy journal 
 # journal() {
 #         mkdir -p ~/journal/`date +%Y`
-#         $EDITOR ~/journal/`date +%Y`/`date +%m-%d`
+#         $EDITOR ~/journal/`date +%Y`/`date +%d-%m`
 #     }
 # alias jj=journal # opens todays journal file in vim for editing.
 
 md_journal() {
         mkdir -p ~/journal/`date +%Y`
-        $EDITOR ~/journal/`date +%Y`/`date +%m-%d\.md`
+        $EDITOR ~/journal/`date +%Y`/`date +%d-%m\.md`
     }
-alias mj=md_journal # opens todays journal as a markdown file in vim for editing.
 
+# alias mj=md_journal # opens todays journal as a markdown file in vim for editing.
+#
+
+alc() { $EDITOR ~/journal/2019/minding_me/alcohol_journal.md }
+grat() { $EDITOR ~/journal/2019/minding_me/gratitude_journal.md }
+pain() { $EDITOR ~/journal/2019/minding_me/pain_points.md }
+ideas() { $EDITOR ~/journal/2019/ideas/ideas_to_go_at.md }
+jour() { cd ~/journal/2019 && ls }
+
+# Donaghs todo.md shortcuts
+todo() { cd ~/journal/2019/TODO && ls }
+geta() { ag '\(A\)' . }
+getb() { ag '\(B\)' . }
+getc() { ag '\(C\)' . }
+
+# todo.txt CLI tool
+# alias -g td='/home/donagh/journal/2019/TODO/todo-cli-tool/todo.txt-cli/tododo.sh -d ~/journal/2019/TODO/todo-cli-tool/todo.txt-cli/todo.cfg' 
+# alias t='./todo.sh -d /path/to/your/todo.cfg'
 # grep hist
 histgrep () 
   {
   grep -r "$@" ~/.history
   history | grep "$@"
   }
-alias hg=histgrep
+# alias hg=histgrep
 
 # speaking clock in the terminal
-alias tn='t | festival --tts'
-alias tn='t | spd-say --pipe-mode'
+# alias tn='t | festival --tts'
+# alias tn='t | spd-say --pipe-mode'
 
 # To stop ranger from loading both the default and your custom rc.conf,
 #  please set the environment variable RANGER_LOAD_DEFAULT_RC to FALSE.
