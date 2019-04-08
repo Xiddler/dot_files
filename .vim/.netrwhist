@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/donagh/backups/zim'
-let g:netrw_dirhist_2='/home/donagh/backups/zim-HDD'
-let g:netrw_dirhist_3='/usr/bin'
-let g:netrw_dirhist_4='/bin'
-let g:netrw_dirhist_5='/media/donagh/3520-FD13/0My_Folders/00Donaghs_ORG/14_CONTACTS'
-let g:netrw_dirhist_6='/media/donagh/3520-FD13/0My_Folders/00Donaghs_ORG'
-let g:netrw_dirhist_7='/media/donagh/3520-FD13/0My_Folders'

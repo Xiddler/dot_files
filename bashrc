@@ -4,6 +4,18 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
+# this is also in .zshrc but this allows access from vim
+export TODOTXT_DEFAULT_ACTION=ls
+todo_folder='/home/donagh/journal/2019/TODO/todo-cli-tool/todo.txt-cli/'
+
+# the following function greps a term as in $ grep <term> <Enter>
+v()
+{
+    grep "$1" $todo_folder/todo.txt 
+}
+alias t='/home/donagh/journal/2019/TODO/todo-cli-tool/todo.txt-cli/todo.sh -d ~/journal/2019/TODO/todo-cli-tool/todo.txt-cli/todo.cfg' 
+
+# the following function greps a term as in $ grep <term> <Enter>
 # alias cx='clear'
 # alias ds='cd ~/Documents'
 # alias hh='cd ~/'

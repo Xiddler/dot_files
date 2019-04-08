@@ -153,11 +153,11 @@
         " settings and shortcuts for markdown files
     " map local leader
     let maplocalleader="," 
-    " 
-    nnoremap <buffer> <LocalLeader>a I(A) <Esc> $
-    nnoremap <buffer> <LocalLeader>b I(B) <Esc> $
-    nnoremap <buffer> <LocalLeader>c I(C) <Esc> $ " <leader> c above overrides
-    " inserts two underscores around a word - for use in Markdown files.
+    " the following were for my version of todo.txt  - now defunct 
+    " nnoremap <buffer> <localleader>a I(A) <Esc> $
+    " nnoremap <buffer> <localleader>b I(B) <Esc> $
+    " nnoremap <buffer> <localleader>c I(C) <Esc> $ " <leader> c above overrides
+    " " inserts two underscores around a word - for use in Markdown files.
     augroup markdown
     au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.mdwn,*.md  set ft=markdown
     " for TODO/*.md files

@@ -131,52 +131,7 @@ setopt extendedglob # extended globbbing e.g. ls -d ^*.py excludes .py files
 setopt SHARE_HISTORY # uses same history for all sessions
 # only fools wouldn't do this ;-) 
 export EDITOR="vim"
-# ALIASES
-# see also bindkey below
-# alias cx="clear"
-# alias hj='history'
-# alias ping='ping -c3 '
-# NAVIGATION
-# alias ra='ranger'
-# alias dl='cd ~/Downloads/'
 #
-# navigate to folder using ~gpl
-# alias gpl="cd /media/donagh/3520-FD13/2programming_repository/python/1python_projects/django_projects/lanner_django"
-# alias ds='cd ~/Documents'
-# alias hh='cd ~/'
-# alias cd..='cd ..'
-# Edit config files
-# alias vim='sudo vim '
-# dot files now linked to the files in SD35/.../dot_files/dot_files
-# alias cb='cat ~/.bashrc'
-# alias cv='cat ~/.vimrc'
-# alias cz='cat ~/.zshrc'
-# alias vb='vim ~/.bashrc'
-# alias vv='vim ~/.vimrc'
-# alias vz="vim ~/.zshrc"
-# alias ni='nvim $HOME/.config/nvim/init.vim' # neovim, if installed
-# Globals
-# alias -g G='| egrep -i --color=auto'
-# alias -g xn='| xargs -n 1'
-# alias -g GC='git commit -m "'
-# alias -g PS='ps aux | egrep -i --color=auto'
-# alias -g P='pwd -P'
-# alias -g C=' | clipit'
-# alias -g C=' | gpaste-client'
-# alias -g lsd='du -s -- *(D) | sort -k1n' # list size of directories
-# alias -g nt='gnome-terminal && zsh -l' # open a new zsh terminal  
-# alias -g exa='~/Applications/exa-linux-x86_64' # modern ls
-# alias -g zz='zsh -l'
-# passwords
-# alias -g passin='python3 /media/donagh/3520-FD13/2programming_repository/python/1python_projects/tkinter_GUI/passin_credentials/pw_data-input.py' # input new password
-# alias -g catt='cat /media/donagh/3520-FD13/zim/Computer/11SignUps.txt|ag -i -A5 '
-# alias -g passout='cat /media/donagh/3520-FD13/zim/Computer/11SignUps.txt|ag -i -A5 ' # alternative alias
-# contacts
-# alias -g contin='python3 /media/donagh/3520-FD13/2programming_repository/python/1python_projects/tkinter_GUI/passin_credentials/contin.py' # input new contact
-# alias -g contout='cat /media/donagh/3520-FD13/zim/ORG/03_CONTACTS/Contacts.txt | ag -i -A18 -B2 ' # get contact  
-# alias -g kontout='cat /media/donagh/3520-FD13/zim/ORG/03_CONTACTS/Contacts.txt | ag -i -A18 -B2 '
-# backups
-# alias -g zimbu='/home/donagh/.scripts/zim_backup_to_tinyUSB.sh'
 
 # alias -s
 # the following shortcut alias means that pressing enter after just a 
@@ -254,6 +209,8 @@ eval "`dircolors -b ~/.dircolors`"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# FUNCTIONS
+#
 # Navigation shortcuts
 bal() { cd $HOME/sd35/0My_Folders/11Balmurry/Balmurry_Sale/}
 sd3() { cd $HOME/sd35/}
@@ -299,22 +256,29 @@ pain() { $EDITOR ~/journal/2019/minding_me/pain_points.md }
 ideas() { $EDITOR ~/journal/2019/ideas/ideas_to_go_at.md }
 jour() { cd ~/journal/2019 && ls }
 
-# Donaghs todo.md shortcuts
-todo() { cd ~/journal/2019/TODO && ls }
-geta() { ag '\(A\)' . }
-getb() { ag '\(B\)' . }
-getc() { ag '\(C\)' . }
 
-# todo.txt CLI tool
+# todo.txt
+# CLI tool
+# t is aliased to .../todo.sh in .zsh_aliases
+export TODOTXT_DEFAULT_ACTION=ls
+todo_folder='/home/donagh/journal/2019/TODO/todo-cli-tool/todo.txt-cli/'
+# the following function greps a term as in $ grep <term> <Enter>
+v()
+{
+    grep "$1" $todo_folder/todo.txt 
+}
+# put the following in .zsh_aliases - alias t='./todo.sh -d /path/to/your/todo.cfg'
 # alias -g td='/home/donagh/journal/2019/TODO/todo-cli-tool/todo.txt-cli/tododo.sh -d ~/journal/2019/TODO/todo-cli-tool/todo.txt-cli/todo.cfg' 
 # alias t='./todo.sh -d /path/to/your/todo.cfg'
+#
+#
+#
 # grep hist
 histgrep () 
   {
   grep -r "$@" ~/.history
   history | grep "$@"
   }
-# alias hg=histgrep
 
 # speaking clock in the terminal
 # alias tn='t | festival --tts'
